@@ -20,7 +20,7 @@ class AuthModule extends VuexModule {
     @Action
     async loginUser({username, password}: {username: string; password: string}) {
         try {
-            const res  = await axios.post('http://localhost:8000/auth/', {username, password});
+            const res  = await axios.post('auth', {username, password});
             await router.push({name: 'Task'})
             console.log(res.data);
         } catch (error) {

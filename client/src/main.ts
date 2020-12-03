@@ -9,12 +9,15 @@ import 'sweetalert2/dist/sweetalert2.min.css'
 // eslint-disable-next-line @typescript-eslint/ban-ts-ignore
 // @ts-ignore
 import VueSession from 'vue-session'
-
+import axios from "axios";
 
 Vue.config.productionTip = false
 Vue.use(VueCompositionAPI);
 Vue.use(VueSession)
 Vue.use(VueSweetalert2)
+
+axios.defaults.baseURL = 'http://localhost:8000/';
+
 
 new Vue({
   router,
